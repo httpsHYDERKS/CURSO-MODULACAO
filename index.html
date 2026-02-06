@@ -3,16 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ARCANJO PERALTA | CURSO DE MODULAÇÃO</title>
+    <title>GTA RP FIVEM | CURSO DE MODULAÇÃO</title>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&display=swap');
 
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            /* Esconde o mouse padrão em todo o site */
-            cursor: none !important;
+            cursor: none !important; /* Esconde o mouse padrão */
         }
 
         body {
@@ -24,14 +23,14 @@
             overflow-x: hidden;
         }
 
-        /* O CÍRCULO DO MOUSE */
+        /* CURSOR EM CÍRCULO */
         #custom-cursor {
             width: 20px;
             height: 20px;
             border: 2px solid #fff;
             border-radius: 50%;
             position: fixed;
-            pointer-events: none; /* Garante que o círculo não atrapalhe os cliques */
+            pointer-events: none;
             z-index: 9999;
             transition: transform 0.1s ease-out;
             transform: translate(-50%, -50%);
@@ -91,6 +90,7 @@
             min-width: 320px;
             height: 380px;
             background-color: #222;
+            /* Lembre-se de colocar o link da sua foto cinematográfica aqui */
             background-image: url('https://raw.githubusercontent.com/ttpshyderks/ttpshyderks.github.io/main/Captura%20de%20tela%202026-02-05%20205441.png'); 
             background-size: cover;
             background-position: center;
@@ -99,6 +99,7 @@
 
         .intro-text { flex: 1; min-width: 300px; }
 
+        /* EFEITO GLITCH ATUALIZADO PARA GTA RP FIVEM */
         .glitch {
             font-size: 3.5rem;
             font-weight: 900;
@@ -110,7 +111,7 @@
         }
 
         .glitch::before, .glitch::after {
-            content: "ARCANJO PERALTA";
+            content: "GTA RP FIVEM";
             position: absolute; top: 0; left: 0; width: 100%; height: 100%; opacity: 0.8;
         }
 
@@ -161,7 +162,7 @@
     <div class="main-card">
         <header>
             <div class="logo-area">
-                <a href="#" class="logo">▲ ARCANJO PERALTA</a>
+                <a href="#" class="logo">▲ GTA RP FIVEM</a>
                 <a href="https://www.youtube.com/@ArcanjoPeralta" target="_blank" class="yt-link">MEU CANAL</a>
             </div>
             <nav><a href="#">Sobre</a><a href="#">Patentes</a><a href="#">Regras</a><a href="#">Contato</a></nav>
@@ -170,10 +171,11 @@
         <section class="intro-grid">
             <div class="profile-img"></div>
             <div class="intro-text">
-                <div class="glitch">ARCANJO PERALTA</div>
+                <div class="glitch">GTA RP FIVEM</div>
                 <h3 style="color:#fff; text-transform:uppercase; margin-bottom:15px; border-bottom: 1px solid #333; padding-bottom: 5px;">Curso de Modulação</h3>
-                <p>Seja bem-vindo ao portal de modulação. Este curso é <b>obrigatório para subida de patente.</b></p>
-                <p style="margin-top:10px;">Dúvidas? Não tenha medo de perguntar!</p>
+                <p>Seja bem-vindo ao portal oficial. Este treinamento é focado na excelência da comunicação via rádio dentro do FiveM.</p>
+                <p style="margin-top:10px;">Lembre-se: a modulação correta salva vidas em patrulha. <b>Obrigatório para promoção.</b></p>
+                <p style="margin-top:10px;">Dúvidas? Procure um instrutor!</p>
             </div>
         </section>
 
@@ -181,43 +183,30 @@
         <div class="codigo-q-grid">
             <ul>
                 <li class="codigo-item"><b>QAP</b> – Na escuta.</li>
-                <li class="codigo-item"><b>QRR</b> – Pedido de reforço.</li>
-                <li class="codigo-item"><b>QTH</b> – Localização.</li>
-            </ul>
-            <ul>
+                <li class="codigo-item"><b>QRR</b> – Reforço.</li>
                 <li class="codigo-item"><b>QSL</b> – Entendido.</li>
-                <li class="codigo-item"><b>QRX</b> – Prioridade no Rádio.</li>
-                <li class="codigo-item"><b>TKS</b> – Obrigado.</li>
             </ul>
         </div>
 
-        <h2 class="section-title"><span>02</span> Código de Patrulha</h2>
+        <h2 class="section-title"><span>02</span> Patrulha</h2>
         <div class="patrol-grid">
             <div class="patrol-item"><b>Cod 5:</b> <span class="highlight-red">FOGO LIBERADO.</span></div>
-            <div class="patrol-item"><b>Cod 7:</b> <span class="highlight-red">QRR MÁXIMO.</span></div>
         </div>
 
         <footer>
-            <div>© 2024 ARCANJO PERALTA</div>
-            <div>TRANSMISSÃO CRIPTOGRAFADA</div>
+            <div>© 2026 GTA RP FIVEM</div>
+            <div>SISTEMA DE TREINAMENTO</div>
         </footer>
     </div>
 
     <script>
         const cursor = document.getElementById('custom-cursor');
-
         document.addEventListener('mousemove', (e) => {
             cursor.style.left = e.clientX + 'px';
             cursor.style.top = e.clientY + 'px';
         });
-
-        // Efeito de clique (o círculo aumenta quando você clica)
-        document.addEventListener('mousedown', () => {
-            cursor.style.transform = 'translate(-50%, -50%) scale(1.5)';
-        });
-        document.addEventListener('mouseup', () => {
-            cursor.style.transform = 'translate(-50%, -50%) scale(1)';
-        });
+        document.addEventListener('mousedown', () => { cursor.style.transform = 'translate(-50%, -50%) scale(1.5)'; });
+        document.addEventListener('mouseup', () => { cursor.style.transform = 'translate(-50%, -50%) scale(1)'; });
     </script>
 
 </body>
