@@ -11,7 +11,7 @@
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            cursor: crosshair; /* Transforma o mouse em um X/Cruz */
+            cursor: crosshair; /* Cursor em formato de mira/X */
         }
 
         body {
@@ -40,7 +40,26 @@
             margin-bottom: 30px;
         }
 
-        .logo { font-weight: 700; font-size: 1.2rem; letter-spacing: 1px; color: #fff; }
+        .logo-area {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .logo { font-weight: 700; font-size: 1.2rem; letter-spacing: 1px; color: #fff; text-decoration: none; }
+        
+        .yt-link {
+            background: #ff0000;
+            color: #fff;
+            text-decoration: none;
+            font-size: 0.7rem;
+            font-weight: bold;
+            padding: 4px 12px;
+            border-radius: 4px;
+            text-transform: uppercase;
+            transition: 0.3s;
+        }
+        .yt-link:hover { background: #b30000; transform: scale(1.05); }
 
         nav a { color: #666; text-decoration: none; margin-left: 20px; font-size: 0.8rem; text-transform: uppercase; }
 
@@ -50,13 +69,12 @@
             min-width: 320px;
             height: 380px;
             background-color: #222;
-            background-image: url('https://i.ytimg.com/vi/tmW5IxHGVs8/maxresdefault.jpg'); 
+            background-image: url('https://raw.githubusercontent.com/ttpshyderks/ttpshyderks.github.io/main/Captura%20de%20tela%202026-02-05%20205441.png'); 
             background-size: cover;
             background-position: center;
             border: 1px solid #333;
         }
 
-        /* EFEITO GLITCH NO NOME */
         .glitch {
             font-size: 2.8rem;
             font-weight: 700;
@@ -87,7 +105,7 @@
         .rules-list li::before { content: "➢"; position: absolute; left: 0; color: #666; }
 
         .patrol-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); gap: 15px; }
-        .patrol-item { background: #1a1a1a; padding: 10px; border-radius: 4px; border-left: 3px solid #333; }
+        .patrol-item { background: #1a1a1a; padding: 10px; border-radius: 4px; border-left: 3px solid #333; margin-bottom: 5px; }
         .highlight-red { color: #ff4d4d; font-weight: bold; }
 
         footer { margin-top: 60px; padding-top: 20px; border-top: 1px solid #333; display: flex; justify-content: space-between; font-size: 0.7rem; color: #555; }
@@ -97,7 +115,10 @@
 
     <div class="main-card">
         <header>
-            <div class="logo">▲ ARCANJO PERALTA</div>
+            <div class="logo-area">
+                <a href="#" class="logo">▲ ARCANJO PERALTA</a>
+                <a href="https://www.youtube.com/@ArcanjoPeralta" target="_blank" class="yt-link">MEU CANAL</a>
+            </div>
             <nav><a href="#">Sobre</a><a href="#">Patentes</a><a href="#">Regras</a><a href="#">Contato</a></nav>
         </header>
 
@@ -106,8 +127,8 @@
             <div class="intro-text">
                 <div class="glitch">ARCANJO PERALTA</div>
                 <h3 style="color:#fff; text-transform:uppercase; margin-bottom:15px;">Curso de Modulação</h3>
-                <p>Seja bem-vindo ao Curso de Modulação! Este curso é de extrema importância para aprender/relembrar o modo correto de modular na rádio. <b>O curso não é opcional:</b> quem quiser subir sua patente terá que ter os cursos para cada patente.</p>
-                <p style="margin-top:10px;">Estamos disponíveis para dúvidas, não tenha medo de perguntar!</p>
+                <p>Seja bem-vindo ao Curso de Modulação! Este curso é crucial para aprender o modo correto de modular na rádio. <b>O curso não é opcional:</b> quem quiser subir sua patente terá que ter os cursos necessários.</p>
+                <p style="margin-top:10px;">Dúvidas? Não tenha medo de perguntar!</p>
             </div>
         </section>
 
@@ -139,29 +160,25 @@
             </ul>
         </div>
 
-        <h2 class="section-title"><span>02</span> Regras sobre a Modulação</h2>
+        <h2 class="section-title"><span>02</span> Regras de Modulação</h2>
         <ul class="rules-list">
-            <li>Não usar palavras inadequadas (xingamentos, “ah”, “ééé...”, “aqui”, “lá”, “ali”, “matei um...”).</li>
-            <li>Sempre prezar por uma modulação breve e rápida; ouça antes de falar.</li>
-            <li>Não manter conversas paralelas; utilize o <b>/pd</b> se necessário.</li>
-            <li>Mantenha a calma mesmo sob pressão. Module com clareza e controle emoções.</li>
-            <li>Caso peça QRR, informe seu QRA.</li>
-            <li>Se alguém pedir QRX, silencie a rádio imediatamente.</li>
-            <li>Não atropele a modulação de outros oficiais.</li>
-            <li>Modulações em VTRs pelo P2 (GTM o piloto pode modular).</li>
-            <li>Perseguição: modulação feita pela primária. Em QTA, a secundária assume.</li>
-            <li>Alterações de trajeto: modular apenas se houver Steve a QTI.</li>
+            <li>Proibido xingamentos ou gírias ("lá", "ali", "matei um").</li>
+            <li>Modulação breve e rápida; aprenda a ouvir antes de falar.</li>
+            <li>Conversas paralelas apenas via <b>/pd</b>.</li>
+            <li>Mantenha a calma, module com clareza mesmo sob pressão.</li>
+            <li>Se pedir QRR, informe seu QRA.</li>
+            <li>Ao comando de QRX, silencie a rádio imediatamente.</li>
+            <li>Modulação em VTR pelo P2 (GTM pode ser o piloto).</li>
+            <li>Perseguição: modulação pela viatura primária.</li>
         </ul>
 
         <h2 class="section-title"><span>03</span> Código de Patrulha</h2>
         <div class="patrol-grid">
             <div class="patrol-item"><b>Cod 0:</b> Iniciando patrulhamento.</div>
             <div class="patrol-item"><b>Cod 1:</b> Intensidade baixa (trânsito).</div>
-            <div class="patrol-item"><b>Cod 2:</b> Intensidade média (Drogas/Registradora/Caixa).</div>
-            <div class="patrol-item"><b>Cod 3:</b> Uso não letal / Intensidade alta (armados).</div>
-            <div class="patrol-item"><b>Cod 4:</b> Situação contida / sob controle.</div>
-            <div class="patrol-item"><b>Cod 5:</b> <span class="highlight-red">Fogo liberado (Atire para matar).</span></div>
-            <div class="patrol-item"><b>Cod 6:</b> Fazer o perímetro / Investigar o local.</div>
+            <div class="patrol-item"><b>Cod 2:</b> Intensidade média (Mascarados/Roubos).</div>
+            <div class="patrol-item"><b>Cod 3:</b> Uso não letal / Intensidade alta.</div>
+            <div class="patrol-item"><b>Cod 5:</b> <span class="highlight-red">FOGO LIBERADO (Atire para matar).</span></div>
             <div class="patrol-item"><b>Cod 7:</b> <span class="highlight-red">QRR MÁXIMO, CHAMAR FORÇA TÁTICA.</span></div>
         </div>
 
